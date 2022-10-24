@@ -21,7 +21,7 @@
 
 <div data-section-id="{{ section.id }}" data-section-type="slideshow-section">
   {%- if section.blocks.size > 0 -%}
-  <div class="dektop-img">
+  <div class="desktop-img">
     <div id="SlideshowWrapper-{{ section.id }}" class="slideshow-wrapper" role="region" aria-label="slideshow" aria-describedby="slideshow-info" tabindex="-1">
       <div class="slideshow slideshow--{{ section.settings.slideshow_height }}{% if display_controls %} slideshow--display-controls{% endif %}"
            id="Slideshow-{{ section.id }}"
@@ -140,7 +140,7 @@
 
         {%- for block in section.blocks -%}
           <div class="slideshow__slide slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }}>
-            {% if block.settings.image == blank %}
+            {% if block.settings.image-mob == blank %}
               <div class="slideshow__image js">
                 <div class="placeholder-background">
                   {% capture current %}{% cycle 1, 2 %}{% endcapture %}
@@ -160,8 +160,8 @@
             {% endif %}
 
             <noscript>
-              <div class="slideshow__image"{% if block.settings.image %} style="background-image: url('{% comment ls-rpl %}{{ block.settings.image | img_url: '2048x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: block.settings.image, img_url: '2048x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}'); background-position: {{ block.settings.alignment }};"{% endif %}>
-                {% if block.settings.image == blank %}
+              <div class="slideshow__image"{% if block.settings.image-mob %} style="background-image: url('{% comment ls-rpl %}{{ block.settings.image | img_url: '2048x' }}{% endcomment %}{%- capture LS_IMG_URL -%}{%- render "ls-img-url", image: block.settings.image, img_url: '2048x' -%}{%- endcapture -%}{{ LS_IMG_URL }}{% comment /ls-rpl %}{% endcomment %}'); background-position: {{ block.settings.alignment }};"{% endif %}>
+                {% if block.settings.image-mob == blank %}
                   <div class="placeholder-background">
                     {% capture current %}{% cycle 1, 2 %}{% endcapture %}
                     {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
@@ -281,6 +281,27 @@
     </div>
   {% endif %}
 </div>
+
+<style>
+  @media (min-width: 220px) and (max-width: 600px) {
+    .mobile-img {
+      display: block;
+    }
+    .desktop-img {
+      display: none;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 8096px) {
+  
+  .desktop-img {
+    display: block;
+  }
+  .mobile-img {
+    display: none;
+  }
+  
+}
+</style>
 
 {% schema %}
 {
