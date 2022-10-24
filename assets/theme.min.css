@@ -4607,7 +4607,7 @@ hr {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-color: transparent;
+    background-color: transparent; 
     z-index: 1;
 }
 .no-js .slideshow__image,
