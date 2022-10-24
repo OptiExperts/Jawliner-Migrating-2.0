@@ -73,14 +73,6 @@
     "mlvedaACS_borderLineColor": "inherit",
     "mlvedaACS_displayFlag": true,
     "sections": {
-      "list-collections-template": {
-        "type": "list-collections-template",
-        "settings": {
-          "display_type": "all",
-          "sort": "alphabetical",
-          "grid": 3
-        }
-      },
       "footer": {
         "type": "footer",
         "blocks": {
@@ -319,6 +311,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Jawliner_Header_3.0.jpg",
+              "image-mob": "shopify:\/\/shop_images\/Bildschirmfoto_202022-10-08_20um_2016.38.32_3_1.jpg",
               "alignment": "center center",
               "slide_title": "Get an Attractive Jawline with<br>#1 Jawline Exerciser",
               "subheading": "Strong facial features in under 10 minutes a day – with the original jawline gum",
