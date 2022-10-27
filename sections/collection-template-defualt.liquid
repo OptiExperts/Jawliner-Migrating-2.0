@@ -155,9 +155,9 @@
         {% for product in collection.products %}
           <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
           {% if collection.description != blank %}
-            <div class="rte">
+          
             {{ collection.description }}
-            </div>
+         
           {% endif %}
             {% include 'product-card-grid', max_height: max_height %}
           </li>
