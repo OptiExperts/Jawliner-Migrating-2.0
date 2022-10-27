@@ -154,11 +154,7 @@
       <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
           <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-          {% if collection.description != blank %}
-          
-            {{ collection.description }}
-         
-          {% endif %}
+
             {% include 'product-card-grid', max_height: max_height %}
           </li>
         {% else %}
