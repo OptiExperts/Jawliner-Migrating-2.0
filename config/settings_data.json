@@ -593,6 +593,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "16304872806d79912c": {
+        "type": "shopify:\/\/apps\/icart-cart-drawer-cart-upsell\/blocks\/icart-block\/e651bbc2-5760-47d8-a513-2aa6ee3a9aa7",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
@@ -814,12 +820,6 @@
           ],
           "settings": {
             "grid": 3
-          }
-        },
-        "cart-template": {
-          "type": "cart-template",
-          "settings": {
-            "cart_notes_enable": false
           }
         },
         "1492033877875": {
