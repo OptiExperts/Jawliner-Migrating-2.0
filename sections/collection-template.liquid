@@ -25,7 +25,7 @@
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
   <ul class="grid grid--uniform grid--view-items">
-    <li>{{ collection.metafields.custom.custom_collections_video }}</li>
+    <li>this is a test</li>
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
         {% include 'product-card-grid', max_height: max_height %}
