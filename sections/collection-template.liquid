@@ -49,7 +49,7 @@
     </li>
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-        {% if forloop.index <= 5 %} <h1>forloop.index this is a test</h1> {% endif %}
+        {% if forloop.index = 5 %} <h1>forloop.index this is a test</h1> {% endif %}
         {% include 'product-card-grid', max_height: max_height %}
       </li>
     {% else %}
