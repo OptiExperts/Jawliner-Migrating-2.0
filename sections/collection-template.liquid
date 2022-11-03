@@ -48,8 +48,7 @@
       </div>
     </li>
     {% for product in collection.products limit: product_limit %}
-      <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
-        {% if forloop.index == 5 %} <h1>forloop.index this is a test</h1> {% endif %}
+      <li class=" {% if forloop.index == 5 %} clr-five grid__item grid__item--{{section.id}} {{ grid_item_width }} {% elsif %} grid__item grid__item--{{section.id}} {{ grid_item_width }} {% endif %}">
         {% include 'product-card-grid', max_height: max_height %}
       </li>
     {% else %}
@@ -99,6 +98,11 @@
     }
   }
   @media (min-width: 750px) and (max-width: 1169px) {
+
+    .clr-five {
+      clear: both !important;
+    }
+
     .grid--uniform .medium-up--one-third:nth-child(3n + 1) {
       clear:inherit !important; 
     }
